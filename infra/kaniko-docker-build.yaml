@@ -14,7 +14,7 @@ spec:
     volumeMounts:
       - name: docker-reg-secret
         mountPath: /kaniko/.docker
-      - name: code-pv
+      - name: source-code-pv
         mountPath: /sourceCode  
   restartPolicy: Never
   volumes:
@@ -24,7 +24,7 @@ spec:
         items:
           - key: .dockerconfigjson
             path: config.json
-    - name: code-pv
+    - name: source-code-pv
       hostPath:
-        path: /src/kaniko-demo
+        path: /tmp/sourceCode/kaniko-demo
         type: Directory        
