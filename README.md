@@ -91,5 +91,5 @@ curl http://localhost:8080/ps/actuator/health | jq .
 ```
 
 ```
-curl http://localhost:8080/ps/actuator/info
+curl http://localhost:8080/ps/actuator/info | jq .
 ```
